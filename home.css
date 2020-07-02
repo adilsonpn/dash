@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+/* body */
+.body {
+    margin: 0;
+   /* onload="verificaUsuario()" */
+}
+
+/* Header */
+.header {
+    background-color: #f1f1f1;
+    padding: 2px;
+    text-align: center;
+    display: block;
+    color: orange;
+}
+
+/* Style 1 */
+.topnav {
+    overflow: hidden;
+    background-color: orange;
+}
+
+/* Style a */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Style a1*/
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+ 
+}
+
+/* coluna 1*/
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* foto */
+.column.foto {
+    width: 25%;
+    text-align: center;
+    background-color: orange;
+}
+
+/* topo */
+.column.topo {
+    width: 50%;
+    text-align: center;
+    background-color: orange;
+}
+
+/* logo */
+.column.logo {
+    width: 25%;
+    text-align: center;
+    background-color: orange;
+}
+
+/* side */
+.column.side {
+    width: 25%;
+    text-align: center;
+}
+
+/* side */
+.column.middle {
+    width: 50%;
+    text-align: center;
+}
+
+/* clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .column.foto, .column.topo, .column.logo  {
+        width: 100%;
+    }
+}
+
+/* Style rodape */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.button {
+    background-color: blue;
+    border-radius: 25px;
+    border-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 1px;
+    cursor: pointer;
+    width: 70%;
+  }
+
+  select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+  }
+
+  p.ridge {
+      border-style: ridge;
+      width: 100%;
+      padding: 16px 20px;
+    }
