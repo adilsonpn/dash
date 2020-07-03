@@ -1,3 +1,12 @@
+var templateAlert = `<br>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        **ALERT**
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                        `;
+
 function enviar(){
     var txtEmail = document.getElementById("txtEmail").value;
     var txtSenha = document.getElementById("txtSenha").value;
@@ -7,6 +16,7 @@ function enviar(){
     // json que vai no corpo da mensagem
     var msgBody = {
         email: txtEmail,
+        racf: txtEmail,
         senha: txtSenha
     }
 
@@ -30,11 +40,14 @@ function tratarResultado(resp){
     }
     else if (resp.status == 404){  // not found
         //alert("Usuario NAO FOI ENCONTRADO EM NOSSA BASE");
-        document.getElementById("resposta").innerHTML = "<h3>Usuario não encontrado</h3>";
+        console.log("teste404");
+        document.getElementById("resposta").innerHTML = templateAlert.replace("**ALERT**", "Usuário não encontrado!");
     }
     else if (resp.status == 403){  // forbidden
        // alert("Senha INVALIDA");
-       document.getElementById("resposta").innerHTML = "<h3>Senha Inválida</h3>";
+       console.log("teste403");
+       document.getElementById("resposta").innerHTML = templateAlert.replace("**ALERT**", "Senha inválida!");
+       
     }
 }
 
@@ -46,6 +59,6 @@ function efetivarLogin(res){
 }
 
 function destruir(){
-    localStorage.clear;
-    localStorage.removeItem("userDash");
+localStorage.removeItem("userDash");
+
 }

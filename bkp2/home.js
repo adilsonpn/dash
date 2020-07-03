@@ -1,11 +1,12 @@
 var templateBarra = `<img src="**FOTO**" width="20%" " ><br>**NOME**`;
 
-var templateUser = `<table>
-                        <tr>
-                            <th>(**CONT**) **NOME** </th>
-                            <td>Transações: **VOLUME**</td>
-                        </tr>
-                     </table>`;
+var templateUser = `<div class="row">
+                        <div class="card-body col-md-12 comborda text-center">
+                            <h5>(**CONT**) **NOME**</h5>
+                           
+                           Volume transacional: **VOLUME**
+                        </div>
+                    </div>`;
 
 function carregaTeste(){
     var userLogado = localStorage.getItem("userDash");

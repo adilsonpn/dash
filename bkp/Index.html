@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="index.css">
         <script type="text/javascript" src="index.js"></script>
     </head>
-    <body class="text-center" onload="destruir()">
+    <body class="text-center">
         <form class="form-signin">
         <div class="container">
             <div class="row">
@@ -17,8 +17,15 @@
                     <h3>Dashboard</h3>
                 </div>
                         
-                <input type="email" id="inputEmail" class="login" placeholder="Email address" required autofocus>
-                <input type="password" id="inputPassword" class="login" placeholder="Password" required>
+                <div class="form-group">
+                    <label for="txtEmail">Seu Email</label>
+                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">Também odiamos SPAM :)</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="txtSenha">Sua Senha</label>
+                    <input type="password" class="form-control" id="txtSenha">
+                  </div>
         
                 <button class="button" onclick="enviar()">Conectar-se</button>
                 <p class="mt-5 mb-3 text-muted">&copy; 2020 Xô Coronga</p>

@@ -31,11 +31,14 @@ function tratarResultado(resp){
     }
     else if (resp.status == 404){  // not found
         //alert("Usuario NAO FOI ENCONTRADO EM NOSSA BASE");
-        document.getElementById("resposta").innerHTML = "<h3>Usuario não encontrado</h3>";
+        console.log("teste404");
+        document.getElementById("resposta").innerHTML = "<h1>Usuario não encontrado</h1>";
     }
     else if (resp.status == 403){  // forbidden
        // alert("Senha INVALIDA");
-       document.getElementById("resposta").innerHTML = "<h3>Senha Inválida</h3>";
+       console.log("teste403");
+       document.getElementById("resposta").innerHTML = "<h1>Senha Inválida</h1>";
+       
     }
 }
 
@@ -44,4 +47,9 @@ function efetivarLogin(res){
     // redirecionar para a página HOME.HTML
     localStorage.setItem("userDash",JSON.stringify(res));
     window.location="home.html";
+}
+
+function destruir(){
+localStorage.removeItem("userDash");
+
 }
